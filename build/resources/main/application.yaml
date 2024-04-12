@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:postgres@192.168.0.4:5432/prmo_db
+    username: postgres
+    password: "postgres"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+        cache:
+
+
+  liquibase:
+    change-log: classpath:liquibase/changelog.yaml
+#  thymeleaf:
+#    prefix: classpath:/templates/
+#    cache: false

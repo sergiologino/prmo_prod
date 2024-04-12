@@ -1,7 +1,9 @@
 # FROM openjdk:17-oracle
-FROM amazonlinux:2
-ARG version=17.0.10
+FROM amazoncorretto:17.0.7-alpine
+ARG version=17.0.7
+
 WORKDIR /app
 COPY build/libs/prmo-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
 EXPOSE 8080
+EXPOSE 5432
+CMD ["java","-jar","/app/app.jar"]
