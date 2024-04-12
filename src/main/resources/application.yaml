@@ -3,7 +3,10 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://147.45.144.17:5432/prmo_db
+    #public IP
+    # url: jdbc:postgresql://147.45.144.17:5432/prmo_db
+    #private IP
+    url: jdbc:postgresql://192.168.0.4:5432/prmo_db
     username: admin
     password: "<mYZ2?RMyyug}l"
   jpa:
